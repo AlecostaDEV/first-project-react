@@ -8,8 +8,8 @@ function MyRoutes() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/usuarios" component={Users} />
+        <Route path="/" element={<Home />} />
+        <Route path="/usuarios" element={<Users />} />
       </Routes>
     </Router>
   );

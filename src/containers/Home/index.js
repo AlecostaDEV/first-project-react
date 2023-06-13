@@ -1,24 +1,26 @@
 import React, { useState, useRef } from "react";
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
 import PeopleChatting from "../../assets/chatting-img.svg";
 import Arrow from "../../assets/arrow-img.svg";
 
+import H1 from "../../components/Title"
+import ContainerItens from "../../components/ContainerItens"
+import Button from "../../components/Button"
+
 import {
   Container,
   Image,
-  ContainerItens,
-  H1,
   InputLabel,
   Input,
-  Button,
 } from "./styles";
 
 const App = () => {
   //usando função arrow (poderia ser normal, igual a de baixo)
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
   const inputName = useRef();
   const inputAge = useRef();
 
@@ -32,6 +34,8 @@ const App = () => {
     });
 
     setUsers([...users, newUser]);
+
+    navigate("/usuarios");
   }
 
   return (
@@ -49,9 +53,6 @@ const App = () => {
         <Button onClick={addNewUser}>
           Cadastrar <img alt="arrow" src={Arrow} />
         </Button>
-
-        <Link to="/usuarios">Usuarios</ Link>
-
       </ContainerItens>
     </Container>
   );

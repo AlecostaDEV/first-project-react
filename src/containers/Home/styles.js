@@ -1,4 +1,5 @@
 import styled from "styled-components"; //importando a biblioteca styked-componets
+
 import Background from "../../assets/background-img.svg";
 //iniciar componentes com letra maiúscula
 
@@ -16,39 +17,12 @@ export const Container = styled.div`
   box-sizing: border-box;
   gap: 40px;
 
-  height: 100vh;
+  height: 100%;
 `;
 
 export const Image = styled.img`
   //imagem
   margin-top: 30px;
-`;
-
-export const ContainerItens = styled.div`
-  //container secundário
-  background: linear-gradient(
-    157.44deg,
-    rgba(255, 255, 255, 0.6) 0.84%,
-    rgba(255, 255, 255, 0.6) 0.85%,
-    rgba(255, 255, 255, 0.15) 100%
-  );
-  border-radius: 61px 61px 0px 0px;
-
-  padding: 50px 36px;
-  display: flex;
-  flex-direction: column;
-
-  height: 100vh;
-`;
-
-export const H1 = styled.h1`
-  font-style: normal;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 40px;
-  text-align: center;
-  margin-bottom: 80px;
-  color: #ffffff;
 `;
 
 export const InputLabel = styled.p`
@@ -80,36 +54,4 @@ export const Input = styled.input`
   font-size: 20px;
   line-height: 28px;
   color: #ffffff;
-`;
-
-export const Button = styled.button`
-  width: 342px;
-  height: 74px;
-
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 14px;
-  border: none;
-  margin-top: 130px;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 28px;
-
-  color: #ffffff;
-
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
 `;
